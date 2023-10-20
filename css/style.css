@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;    
+    font-family: Arial, tohma, sans-serif;
+}
+@media (max-width: 768px) {
+    .all {
+        max-width: 90vw;
+        max-height: 100vh;
+        margin: auto;
+        overflow-x: hidden;
+        
+    }
+    .todo-container {
+        width: 90vw;
+    }
+    .add-task {
+        width: 90vw;
+    }
+    .tasks-content {
+        width: 90vw;
+        overflow-y: scroll;
+
+    }
+    .task-stats {
+        max-width: 90vw;
+    }
+    
+}
+.todo-container {
+    width: 800px;
+    margin: 30px auto 0;
+    background-color: #f6f6f6;
+}
+.add-task {
+    padding: 15px;
+    background: rgba(85, 85, 219, 0.6);
+    ;
+    position: relative;
+}
+.add-task input {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: calc(100% - 15px);
+    color: white;
+    font-size: 20px;
+}
+.add-task input:focus {
+    outline: none;
+}
+.add-task .plus {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    background-color: white;
+    right: 12px;
+    border-radius: 50%;
+    line-height: 43px;
+    text-align: center;
+    color: rgba(85, 85, 219, 0.6);
+    cursor: pointer;
+    font-size: 38px;
+    transition: all 0.3s ease;
+}
+.add-task .plus:hover {
+    transform: rotate(90deg);
+}
+
+.tasks-content {
+    padding: 15px;
+}
+.tasks-content .no-tasks-message {
+    color: #777;
+    font-size: 15px;
+}
+.tasks-content > span {
+    display: block;
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 18px;
+
+}
+.tasks-content > span:not(:last-child) {
+    margin-bottom: 10px;
+}
+.svg-inline--fa {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.task-box .delete {
+    width: 25px;
+    height: 25px;
+    float: right;
+    background-color: #E91E63;
+    padding: 4px 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.task-box .delete:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    background-color: #a30d3f;
+}
+
+.task-box.finished {
+    text-decoration: line-through;
+    background-color: rgba(0, 128, 0, 0.434);
+    color: #777;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+.task-stats {
+    width: 600px;
+    overflow: hidden;
+    font-size: 12px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.tasks-count {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+.tasks-completed {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.tasks-count span,
+.tasks-completed span {
+    color: white;
+    padding: 1px 5px;
+    font-size: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    margin: 0px 2px;
+}
+.tasks-count span {
+    background-color: #E91E63;
+}
+.tasks-completed span {
+    background-color: #03A9F4;
+}
+
+
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:1500px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:1500px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+
+.center
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(85, 85, 219, 0.1);
+    border-radius: 3px;
+    z-index: -5;
+}
+
+
+
